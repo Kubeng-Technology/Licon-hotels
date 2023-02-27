@@ -1,0 +1,210 @@
+:root {
+  --transparent: #00000073;
+  --primary-text-dark: #055a5b;
+  --primary-text-light: #ffffff;
+  --para-gray-color: #94949a;
+  --main-font: "Inter", sans-serif;
+  --title-font: "Aclonica", sans-serif;
+  --paragraph: "Poppins", sans-serif;
+}
+
+
+/*About design goes here*/
+
+#about {
+  width: 100%;
+	height: 100%;
+	margin-bottom: 100px;
+}
+
+.about-container {
+  width: 100%;
+  height: 100%;
+  padding: 2% 5%;
+}
+
+.about-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+	margin-bottom: 100px;
+}
+
+.about-heading > h1 {
+  width: fit-content;
+  transition: .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: slideBehind 3s, h1MotionMoves 2s infinite alternate;
+}
+
+.about-heading > h1:hover {
+  color: var(--para-gray-color);
+}
+
+.about-heading > h1:hover .border-bottom {
+  width: 80%;
+  background-color: var(--para-gray-color);
+}
+
+.border-bottom {
+  background-color: var(--primary-text-dark);
+  width: 50%;
+  padding: 1px;
+  transition: .5s ease-in-out;
+}
+
+/*about details design*/
+
+.about-details {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.about-images {
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	position: relative;
+	margin-bottom: 80px;
+}
+
+.about-first-img-holder {
+	height: 350px;
+	width: 80%;
+	animation: slideAboutImage 3s;
+	position: relative;
+	transition: .85s ease-in-out;
+}
+
+.about-first-img-holder:hover, .about-second-img-holder:hover {
+	transform: scale(0.95);
+}
+
+.about-first-img-holder > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.about-second-img-holder {
+	height: 250px;
+	width: 50%;
+	animation: slideAboutImageSecond 3s;
+	position: absolute;
+	bottom: -10%;
+	left: 0;
+	z-index: 0;
+	transition: .5s ease-in-out;
+}
+
+.about-second-img-holder > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* about details information box design*/
+
+.about-details-info-box {
+	position: relative;
+	padding: 10% 0px;
+}
+
+/*first about design*/
+
+.first-about-details {
+	width: 80%;
+	position: absolute;
+	color: var(--primary-text-light);
+	padding: 15px;
+	border-radius: 10px;
+	background-color: var(--primary-text-dark);
+	top: 40%;
+	left: 0%;
+	animation: slideAboutImageSecond 3s;
+	transition: .85s ease-in-out;
+}
+
+.about-details-heading-and-icon {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+	font-size: 1rem;
+	font-family: var(--main-font);
+}
+
+.about-details-heading-and-icon > .fa-solid {
+	background-color: #FFFDE7;
+	color: var(--primary-text-dark);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.about-details-btn {
+	width: 30px;
+	height: 30px;
+	border: 1px solid white;
+	background-color: transparent;
+	font-size: 1.5rem;
+	position: absolute;
+	right: 5%;
+}
+
+.about-details-btn > span {
+	display: block;
+	rotate: 0deg;
+	transition: .85s ease-in-out;
+	color: var(--primary-text-light);
+}
+
+.about-info > p{
+	line-height: 1.7;
+}
+
+/*second about design*/
+
+.second-about-details {
+	width: 80%;
+	position: absolute;
+	color: var(--primary-text-light);
+	padding: 15px;
+	border-radius: 10px;
+	background-color: var(--primary-text-dark);
+	top: 100%;
+	left: 10%;
+	right: 10%;
+	transition: .85s ease-in-out;
+	animation: slideAboutImage 3s;
+}
+
+.first-about-details.active {
+	top: 100%;
+	left: 10%;
+	right: 10%;
+	background-color: var(--primary-text-light);
+	color: var(--primary-text-dark);
+	z-index: 3;
+	box-shadow: -1px 1px 5px 0px --transparent;
+}
+
+button.about-first-btn > span.active {
+	rotate: 45deg;
+	color: var(--primary-text-dark);
+}
+
+.second-about-details.active {
+	top: 40%;
+	left: 0%;
+	background-color: var(--primary-text-light);
+	color: var(--primary-text-dark);
+}
+
+button.about-second-btn > span.active {
+	rotate: 45deg;
+	z-index: 3;
+	color: var(--primary-text-dark);
+}
