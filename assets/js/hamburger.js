@@ -20,10 +20,12 @@ hamburger.addEventListener("click", () => {
 });
 
 for (let i = 0; i < hamburgerLinks.length; i++) {
-  hamburgerLinks[i].addEventListener("click", () => {
-    first.classList.remove("active");
-    second.classList.remove("active");
-    third.style.display = "block";
-		hamburgerLink.style.visibility = "hidden";
-  });
+  setTimeout(() => {
+    hamburgerLinks[i].addEventListener("click", () => {
+      first.classList.remove("active");
+      second.classList.remove("active");
+      third.style.display = "block";
+      hamburgerLink.style.display = "none";
+    });
+  }, 100);
 }
