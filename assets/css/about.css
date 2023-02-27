@@ -117,6 +117,7 @@
 
 .first-about-details {
 	width: 80%;
+	height: 200px;
 	position: absolute;
 	color: var(--primary-text-light);
 	padding: 15px;
@@ -169,6 +170,7 @@
 
 .second-about-details {
 	width: 80%;
+	height: 200px;
 	position: absolute;
 	color: var(--primary-text-light);
 	padding: 15px;
