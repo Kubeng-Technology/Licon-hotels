@@ -116,7 +116,7 @@
 /*first about design*/
 
 .first-about-details {
-	width: 80%;
+	width: 90%;
 	height: 200px;
 	position: absolute;
 	color: var(--primary-text-light);
@@ -169,7 +169,7 @@
 /*second about design*/
 
 .second-about-details {
-	width: 80%;
+	width: 90%;
 	height: 200px;
 	position: absolute;
 	color: var(--primary-text-light);
