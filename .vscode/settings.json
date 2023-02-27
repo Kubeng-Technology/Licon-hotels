@@ -1,4 +1,11 @@
 {
   "liveServer.settings.port": 5501,
-  "cSpell.words": ["archiaregular", "Licon", "Lincon", "opentype", "truetype"]
+  "cSpell.words": [
+    "archiaregular",
+    "invertedcursor",
+    "Licon",
+    "Lincon",
+    "opentype",
+    "truetype"
+  ]
 }

@@ -11,7 +11,7 @@
 
 :root {
   --transparent: #00000073;
-  --primary-text-dark: #000000;
+  --primary-text-dark: #055a5b;
   --primary-text-light: #ffffff;
   --para-gray-color: #94949a;
   --main-font: "Inter", sans-serif;
@@ -34,6 +34,24 @@ body {
   overflow-x: hidden;
   font-size: 100%;
   font-family: var(--main-font);
+  cursor: pointer;
+}
+
+/*cursor design*/
+
+#invertedcursor {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  mix-blend-mode: difference;
+  transition: transform 0.4s;
+  border: 2px solid white;
 }
 
 a {
@@ -90,15 +108,15 @@ header {
   height: 100vh;
   color: var(--primary-text-light);
   display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 80px;
-	align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
 }
 
 .header-wrapper {
   background-color: transparent;
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   top: 0;
   left: 0;
@@ -144,7 +162,8 @@ nav#hamburger > .second-stick.active {
 }
 
 #hamburger > .first-stick,
-.second-stick, .third-stick {
+.second-stick,
+.third-stick {
   width: 40px;
   padding: 1px;
   background-color: var(--primary-text-light);
@@ -165,11 +184,11 @@ nav#hamburger > .second-stick.active {
   gap: 80px;
   align-items: center;
   justify-content: center;
-	z-index: 1;
+  z-index: 2;
 }
 
 .hamburger-link {
-	display: none;
+  display: none;
 }
 
 .hamburger-link > nav {
@@ -183,7 +202,7 @@ nav#hamburger > .second-stick.active {
 .hamburger-link > nav.hamburger-social-link {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 25px;
   align-items: center;
   justify-content: center;
 }
@@ -192,18 +211,25 @@ nav#hamburger > .second-stick.active {
   color: var(--primary-text-light);
   font-size: 2rem;
   font-family: var(--title-font);
-	transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .hamburger-link > nav > a:hover {
   color: var(--primary-text-light);
   font-size: 2rem;
-	color: var(--para-gray-color);
+  color: var(--para-gray-color);
+	transform: translate(5px, 0px) scale(0.95);
 }
 
 .hamburger-link > nav.hamburger-social-link > a {
   font-size: 1rem;
 }
+
+i.fa-brands {
+	font-weight: 400;
+	font-size: 2rem;
+}
+
 
 /*home design*/
 
@@ -212,46 +238,60 @@ nav#hamburger > .second-stick.active {
 }
 
 .home-wrapper > h1 {
-	font-size: 3.3rem;
-	color: var(--primary-text-light);
-	animation: slideIn 3s;
+  font-size: 3.3rem;
+  color: var(--primary-text-light);
+  animation: slideIn 3s, h1MotionMoves 2s infinite alternate;
 }
 
 /*home arrow design*/
 .home-arrow {
-	overflow: hidden;
-	z-index: 0;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .home-arrow > img {
-	animation: upDown 1500ms  500ms infinite alternate;
+  animation: upDown 1500ms 500ms infinite alternate;
 }
 
+/*the home arrow animation*/
 @keyframes upDown {
-	0% {
-		transform: translate(0, -50px);
-	}
+  0% {
+    transform: translate(0, -50px);
+  }
 
-	100%{
-		transform: translate(0, 80px);
-	}
+  100% {
+    transform: translate(0, 80px);
+  }
 }
 
+/*the home h1 animation slideIn*/
 @keyframes slideIn {
-	0% {
-		margin-left: 130%;
-		width: 100%;
-		opacity: .1;
-	}
-	
-	75% {
-		margin-left: -130%;
-		width: 100%;
-		opacity: 1;
-	}
+  0% {
+    margin-left: 130%;
+    width: 100%;
+    opacity: 0.1;
+  }
 
-	100% {
-		margin-left: 0%;
-		width: 100%;
-	}
+  75% {
+    margin-left: -130%;
+    width: 100%;
+    opacity: 1;
+  }
+
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*the home h1 animation that goes up and down*/
+
+@keyframes h1MotionMoves {
+  0% {
+    transform: translate(0, -10px);
+  }
+
+  100% {
+    transform: translate(0, 10px);
+  }
 }
