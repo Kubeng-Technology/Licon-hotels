@@ -77,6 +77,7 @@
 	animation: slideAboutImage 3s;
 	position: relative;
 	transition: .85s ease-in-out;
+	z-index: 1;
 }
 
 .about-first-img-holder:hover, .about-second-img-holder:hover {
@@ -92,15 +93,32 @@
 .about-second-img-holder {
 	height: 250px;
 	width: 50%;
-	animation: slideAboutImageSecond 3s;
+	animation: slideAboutImageSecond 3s, aboutMotionMoves 2s infinite alternate;
 	position: absolute;
 	bottom: -10%;
 	left: 0;
-	z-index: 0;
+	z-index: 3;
 	transition: .5s ease-in-out;
 }
 
 .about-second-img-holder > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.about-third-img-holder {
+	height: 150px;
+	width: 40%;
+	animation: slideAboutImageSecond 3s, aboutMotionMoves2 2s infinite alternate;
+	position: absolute;
+	top: -10%;
+	left: 0%;
+	z-index: 0;
+	transition: .5s ease-in-out;
+}
+
+.about-third-img-holder > img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -111,20 +129,24 @@
 .about-details-info-box {
 	position: relative;
 	padding: 10% 0px;
+	width: 100%;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	border-top: 2px solid var(--primary-text-dark);
+	border-right: 2px solid var(--primary-text-dark);
 }
 
 /*first about design*/
 
 .first-about-details {
-	width: 90%;
-	height: 200px;
-	position: absolute;
-	color: var(--primary-text-light);
-	padding: 15px;
-	border-radius: 10px;
-	background-color: var(--primary-text-dark);
-	top: 40%;
-	left: 0%;
+	width: 80%;
+	background-color: var(--primary-text-light);
+	border-bottom: 2px solid var(--primary-text-dark);
+	border-left: 2px solid var(--primary-text-dark);
+	color: var(--primary-text-dark);
+	box-shadow: -1px 1px 5px 0px --transparent;
+	padding: 0 25px 25px;
 	animation: slideAboutImageSecond 3s;
 	transition: .85s ease-in-out;
 }
@@ -134,79 +156,17 @@
 	align-items: center;
 	gap: 10px;
 	margin-bottom: 20px;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-family: var(--main-font);
 }
 
 .about-details-heading-and-icon > .fa-solid {
-	background-color: #FFFDE7;
 	color: var(--primary-text-dark);
 	padding: 5px;
 	border-radius: 5px;
 }
 
-.about-details-btn {
-	width: 30px;
-	height: 30px;
-	border: 1px solid white;
-	background-color: transparent;
-	font-size: 1.5rem;
-	position: absolute;
-	right: 5%;
-}
-
-.about-details-btn > span {
-	display: block;
-	rotate: 0deg;
-	transition: .85s ease-in-out;
-	color: var(--primary-text-light);
-}
-
 .about-info > p{
 	line-height: 1.7;
-}
-
-/*second about design*/
-
-.second-about-details {
-	width: 90%;
-	height: 200px;
-	position: absolute;
-	color: var(--primary-text-light);
-	padding: 15px;
-	border-radius: 10px;
-	background-color: var(--primary-text-dark);
-	top: 100%;
-	left: 10%;
-	right: 10%;
-	transition: .85s ease-in-out;
-	animation: slideAboutImage 3s;
-}
-
-.first-about-details.active {
-	top: 100%;
-	left: 10%;
-	right: 10%;
-	background-color: var(--primary-text-light);
-	color: var(--primary-text-dark);
-	z-index: 3;
-	box-shadow: -1px 1px 5px 0px --transparent;
-}
-
-button.about-first-btn > span.active {
-	rotate: 45deg;
-	color: var(--primary-text-dark);
-}
-
-.second-about-details.active {
-	top: 40%;
-	left: 0%;
-	background-color: var(--primary-text-light);
-	color: var(--primary-text-dark);
-}
-
-button.about-second-btn > span.active {
-	rotate: 45deg;
-	z-index: 3;
-	color: var(--primary-text-dark);
+	font-size: 1rem;
 }
