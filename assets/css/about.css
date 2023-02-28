@@ -136,7 +136,7 @@
 .about-details-info-box {
 	position: relative;
 	padding: 10% 0px;
-	width: 80%;
+	width: 100%;
 	background-color: var(--primary-text-dark);
 	display: flex;
 	justify-content: center;
@@ -147,9 +147,9 @@
 /*first about design*/
 
 .first-about-details {
-	width: 120%;
+	width: 80%;
 	background-color: var(--primary-text-light);
-	border-radius: 5px;
+	border-radius: 0px;
 	color: var(--primary-text-dark);
 	box-shadow: -1px 1px 5px 0px --transparent;
 	padding: 25px;
