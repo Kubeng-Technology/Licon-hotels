@@ -63,6 +63,13 @@
   height: 100%;
 }
 
+.about-details-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .about-images {
 	width: 100%;
 	display: flex;
@@ -129,8 +136,8 @@
 .about-details-info-box {
 	position: relative;
 	padding: 10% 0px;
-	width: 100%;
-	background-color: transparent;
+	width: 80%;
+	background-color: var(--primary-text-dark);
 	display: flex;
 	justify-content: center;
 	border: 2px solid var(--primary-text-dark);
@@ -140,15 +147,16 @@
 /*first about design*/
 
 .first-about-details {
-	width: 100%;
+	width: 120%;
 	background-color: var(--primary-text-light);
-	border-top: 2px solid var(--primary-text-dark);
-	border-bottom: 2px solid var(--primary-text-dark);
+	border: 2px solid var(--primary-text-dark);
+	border-radius: 5px;
 	color: var(--primary-text-dark);
 	box-shadow: -1px 1px 5px 0px --transparent;
 	padding: 25px;
 	animation: slideAboutImageSecond 3s;
 	transition: .85s ease-in-out;
+	position: absolute;
 }
 
 .about-details-heading-and-icon {

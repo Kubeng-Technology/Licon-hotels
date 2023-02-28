@@ -1,6 +1,6 @@
 @import url(./animation.css);
 @import url(./about.css);
-
+@import url(./service.css);
 *,
 ::before,
 ::after {
@@ -68,12 +68,6 @@ p {
 main {
   width: 100%;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 section.container-wrapper {
@@ -88,13 +82,6 @@ section.container-wrapper {
 header#header {
   width: 100%;
   height: 100vh;
-  background: url(../images/home-images/hotel-bg-2.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
   color: var(--primary-text-light);
   display: flex;
   flex-direction: column;
@@ -105,12 +92,28 @@ header#header {
   text-align: center;
 }
 
-header#header:before {
+.header-img-holder {
   width: 100%;
-  background-color: var(--transparent);
-  height: 100vh;
-  content: "";
+  height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--transparent);
+}
+
+.header-img-holder:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background-color: var(--transparent);
+  height: 100%;
+  z-index: 0;
+}
+
+.header-img-holder > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .header-wrapper {
@@ -239,12 +242,13 @@ i.fa-brands {
   font-size: 3.3rem;
   color: var(--primary-text-light);
   animation: slideIn 3s, h1MotionMoves 2s infinite alternate;
+  z-index: 3;
 }
 
 /*home arrow design*/
 .home-arrow {
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
 .home-arrow > img {
