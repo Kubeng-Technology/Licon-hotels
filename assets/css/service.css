@@ -29,7 +29,7 @@
 
 .service-heading > h1 {
   width: fit-content;
-	font-size: 2.3rem;
+	font-size: 2.5rem;
   transition: .5s ease-in-out;
   display: flex;
   flex-direction: column;
