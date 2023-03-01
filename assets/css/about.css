@@ -149,10 +149,8 @@
 
 .first-about-details {
 	width: 100%;
-	background-color: var(--primary-text-light);
 	border-radius: 0px;
 	color: var(--primary-text-dark);
-	box-shadow: -1px 1px 5px 0px var(--transparent);
 	padding: 3%;
 	animation: slideAboutImageSecond 3s;
 	transition: .85s ease-in-out;
