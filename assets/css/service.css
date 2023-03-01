@@ -1,0 +1,55 @@
+:root {
+  --transparent: #00000073;
+  --primary-text-dark: #055a5b;
+  --primary-text-light: #ffffff;
+  --para-gray-color: #94949a;
+  --main-font: "Inter", sans-serif;
+  --title-font: "Aclonica", sans-serif;
+  --paragraph: "Poppins", sans-serif;
+}
+
+#services {
+	width: 100%;
+	border: 1px solid;
+	padding: 3% 3%;
+	margin-bottom: 100px;
+}
+
+.service-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.first-service-box, .second-service-box, .third-service-box {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.awaken-service-img, .wedding-service-img, .retreat-service-img {
+	width: 100%;
+	height: 250px;
+}
+
+.awaken-service-img > img, .wedding-service-img > img, .retreat-service-img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.awaken-service-details, .retreat-service-details, .wedding-service-details {
+	padding: 0px 15px;
+}
+
+.retreat-service-details > h1, .awaken-service-details > h1, .wedding-service-details > h1 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+.retreat-service-details > p, .awaken-service-details > p, .wedding-service-details > p {
+	line-height: 1.8;
+	font-size: 0.85rem;
+	text-align: left;
+	
+}

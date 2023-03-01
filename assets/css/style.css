@@ -88,7 +88,7 @@ header#header {
   justify-content: center;
   gap: 80px;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   text-align: center;
 }
 
@@ -239,18 +239,28 @@ i.fa-brands {
 }
 
 .home-wrapper > h1 {
-  font-size: 3.3rem;
+  font-size: 2.5rem;
+  width: 100%;
   color: var(--primary-text-light);
-  animation: slideIn 3s, h1MotionMoves 2s infinite alternate;
+  animation: h1MotionMoves alternate 2s infinite;
   z-index: 3;
 }
-
 /*home arrow design*/
 .home-arrow {
   overflow: hidden;
   z-index: 1;
+  padding-bottom: 85px;
 }
 
 .home-arrow > img {
   animation: upDown 1500ms 500ms infinite alternate;
+}
+
+@media screen and (max-width: 320){
+  .home-wrapper > h1 {
+    font-size: 2.5rem;
+    width: 100%;
+    animation: h1MotionMoves alternate 2s infinite;
+    z-index: 3;
+  }
 }

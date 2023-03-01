@@ -13,8 +13,8 @@
 
 #about {
   width: 100%;
-	height: 100%;
-	margin-bottom: 200px;
+	height: fit-content;
+	margin-bottom: 150px;
 }
 
 .about-container {
@@ -75,12 +75,13 @@
 	display: flex;
 	justify-content: end;
 	position: relative;
-	margin-bottom: 80px;
+	margin-bottom: 100px;
 }
 
 .about-first-img-holder {
 	height: 350px;
 	width: 80%;
+	box-shadow: -1px 1px 5px 0px var(--transparent);
 	animation: slideAboutImage 3s;
 	position: relative;
 	transition: .85s ease-in-out;
@@ -100,7 +101,8 @@
 .about-second-img-holder {
 	height: 250px;
 	width: 50%;
-	animation: slideAboutImageSecond 3s, aboutMotionMoves 2s infinite alternate;
+	box-shadow: -1px 1px 5px 0px var(--transparent);
+	animation: slideAboutImageSecond 3s;
 	position: absolute;
 	bottom: -10%;
 	left: 0;
@@ -117,6 +119,7 @@
 .about-third-img-holder {
 	height: 150px;
 	width: 40%;
+	box-shadow: -1px 1px 5px 0px var(--transparent);
 	animation: slideAboutImageSecond 3s, aboutMotionMoves2 2s infinite alternate;
 	position: absolute;
 	top: -10%;
@@ -135,33 +138,30 @@
 
 .about-details-info-box {
 	position: relative;
-	padding: 10% 0px;
+	padding: 3% 0 3% 3%;
 	width: 100%;
-	background-color: var(--primary-text-dark);
 	display: flex;
 	justify-content: center;
-	border: 2px solid var(--primary-text-dark);
-	border-right: 2px solid var(--primary-text-dark);
+	border-left: 5px solid var(--primary-text-dark);
 }
 
 /*first about design*/
 
 .first-about-details {
-	width: 80%;
+	width: 100%;
 	background-color: var(--primary-text-light);
 	border-radius: 0px;
 	color: var(--primary-text-dark);
-	box-shadow: -1px 1px 5px 0px --transparent;
-	padding: 25px;
+	box-shadow: -1px 1px 5px 0px var(--transparent);
+	padding: 3%;
 	animation: slideAboutImageSecond 3s;
 	transition: .85s ease-in-out;
-	position: absolute;
-	text-align: center;
+	rotate: 0deg;
 }
 
 .about-details-heading-and-icon {
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 	align-items: center;
 	gap: 10px;
 	margin-bottom: 20px;
@@ -175,8 +175,26 @@
 	border-radius: 5px;
 }
 
-.about-info > p{
+.about-info > p {
 	line-height: 1.7;
 	font-size: 0.85rem;
 	text-align: left;
+}
+
+@media screen and (max-width: 320px) {
+	.about-heading > h1 {
+		font-size: 2.5rem;
+	}
+
+	.about-first-img-holder {
+		height: 250px;
+	}
+
+	.about-second-img-holder {
+		height: 150px;
+	}
+
+	.about-third-img-holder {
+		height: 100px;
+	}
 }
