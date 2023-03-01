@@ -20,6 +20,39 @@
 	gap: 50px;
 }
 
+.service-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+	margin-bottom: 100px;
+}
+
+.service-heading > h1 {
+  width: fit-content;
+	font-size: 2.3rem;
+  transition: .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: slideBehind 3s, h1MotionMoves 2s infinite alternate;
+}
+
+.service-heading > h1:hover {
+  color: var(--para-gray-color);
+}
+
+.service-heading > h1:hover .border-bottom {
+  width: 80%;
+  background-color: var(--para-gray-color);
+}
+
+.border-bottom {
+  background-color: var(--primary-text-dark);
+  width: 50%;
+  padding: 1px;
+  transition: .5s ease-in-out;
+}
+
 .first-service-box, .second-service-box, .third-service-box {
 	display: flex;
 	padding: 0% 0% 5%;
@@ -43,7 +76,7 @@
 	padding: 0px 15px;
 }
 
-.retreat-service-details > h1, .awaken-service-details > h1, .wedding-service-details > h1 {
+.retreat-service-details > h2, .awaken-service-details > h2, .wedding-service-details > h2 {
 	font-size: 2rem;
 	margin-bottom: 20px;
 }
