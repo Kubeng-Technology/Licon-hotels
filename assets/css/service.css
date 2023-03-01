@@ -22,6 +22,7 @@
 
 .first-service-box, .second-service-box, .third-service-box {
 	display: flex;
+	padding: 0% 0% 5%;
 	flex-direction: column;
 	gap: 50px;
 	box-shadow: -1px 1px 5px 0px var(--transparent);
