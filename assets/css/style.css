@@ -1,6 +1,7 @@
 @import url(./animation.css);
 @import url(./about.css);
 @import url(./service.css);
+@import url(./gallery.css);
 *,
 ::before,
 ::after {
@@ -14,6 +15,7 @@
 
 :root {
   --transparent: #00000073;
+  --black: #000000;
   --primary-text-dark: #055a5b;
   --primary-text-light: #ffffff;
   --para-gray-color: #94949a;
@@ -27,6 +29,31 @@ font-family: 'Aclonica', sans-serif;
 font-family: 'Cinzel', serif;
 font-family: 'Inter', sans-serif;
 */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-text-dark);
+  border-radius: 0px;
+  height: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--para-gray-color);
+}
 
 html,
 body {
@@ -256,7 +283,7 @@ i.fa-brands {
   animation: upDown 1500ms 500ms infinite alternate;
 }
 
-@media screen and (max-width: 320){
+@media screen and (max-width: 320) {
   .home-wrapper > h1 {
     font-size: 2.5rem;
     width: 100%;

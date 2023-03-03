@@ -1,5 +1,6 @@
 :root {
   --transparent: #00000073;
+  --black: #000000;
   --primary-text-dark: #055a5b;
   --primary-text-light: #ffffff;
   --para-gray-color: #94949a;
@@ -33,6 +34,7 @@
   transition: .5s ease-in-out;
   display: flex;
   flex-direction: column;
+	color: var(--black);
   gap: 2px;
   animation: slideBehind 3s, h1MotionMoves 2s infinite alternate;
 }
@@ -47,7 +49,7 @@
 }
 
 .border-bottom {
-  background-color: var(--primary-text-dark);
+  background-color: var(--black);
   width: 50%;
   padding: 1px;
   transition: .5s ease-in-out;
@@ -59,6 +61,11 @@
 	flex-direction: column;
 	gap: 50px;
 	box-shadow: -1px 1px 5px 0px var(--transparent);
+	transition: .5s ease-in-out;
+}
+
+.first-service-box:hover, .second-service-box:hover, .third-service-box:hover {
+	transform: scale(0.97);
 }
 
 .awaken-service-img, .wedding-service-img, .retreat-service-img {
@@ -79,11 +86,12 @@
 .retreat-service-details > h2, .awaken-service-details > h2, .wedding-service-details > h2 {
 	font-size: 2rem;
 	margin-bottom: 20px;
+	color: var(--black);
 }
 
 .retreat-service-details > p, .awaken-service-details > p, .wedding-service-details > p {
 	line-height: 1.8;
 	font-size: 0.85rem;
 	text-align: left;
-	
+	color: var(--para-gray-color);
 }
