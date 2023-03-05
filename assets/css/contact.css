@@ -216,6 +216,10 @@ label {
 	outline: none;
 	background-color: transparent;
 	border-bottom: 2px solid;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	appearance: none;
+	-webkit-appearance: none;
 	padding: 5px 0;
 	font-size: 1rem;
 	color: var(--primary-text-light);
