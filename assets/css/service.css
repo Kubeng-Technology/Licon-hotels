@@ -90,7 +90,7 @@
 }
 
 .retreat-service-details > p, .awaken-service-details > p, .wedding-service-details > p {
-	line-height: 1.8;
+	line-height: 1.6;
 	font-size: 0.85rem;
 	text-align: left;
 	color: var(--para-gray-color);
