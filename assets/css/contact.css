@@ -366,6 +366,7 @@ label.form-subscribe {
 input[type='submit'] {
   display: flex;
 	justify-content: center;
+	font-size: 1.1rem;
 	width: 200px;
 	height: 50px;
   background-color: var(--primary-text-light);
