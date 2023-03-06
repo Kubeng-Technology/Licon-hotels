@@ -124,7 +124,7 @@
 .room-detail-box {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
   width: 100%;
   padding: 0% 3%;
 }
@@ -133,22 +133,28 @@
   font-size: 2rem;
 }
 
-.room-detail-box > a {
-  width: 50%;
-  padding: 15px 35px;
-  background-color: var(--primary-text-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--primary-text-light);
-  transition: .5s ease-in-out;
-  border: 1px solid transparent;
+.room-detail-box > p {
+  line-height: 1.6;
+	font-size: 0.85rem;
+	text-align: left;
+	color: var(--para-gray-color);
 }
 
-.room-detail-box > a:hover {
+.room-detail-box > a {
+  width: 100%;
+  padding: 15px 35px;
   background-color: var(--primary-text-light);
   color: var(--primary-text-dark);
   border: 1px solid var(--primary-text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s ease-in-out;
+}
+
+.room-detail-box > a:hover {
+  background-color: var(--primary-text-dark);
+  color: var(--primary-text-light);
 }
 
 /*gallery details design*/
