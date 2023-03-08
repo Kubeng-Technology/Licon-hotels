@@ -63,6 +63,7 @@
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 	display: grid;
+	gap: 10px;
 	grid-template-columns: repeat(3, 100%);
 }
 
@@ -77,13 +78,15 @@
 	padding: 0% 0% 5%;
 	flex-direction: column;
 	gap: 50px;
-	box-shadow: 0px 0px 3px 0px var(--transparent);
+	box-shadow: 0px 0px 2px 0px var(--transparent);
 	transition: .5s ease-in-out;
 }
 
+/*
 .first-service-box:hover, .second-service-box:hover, .third-service-box:hover {
 	transform: scale(0.97);
 }
+*/
 
 .awaken-service-img, .wedding-service-img, .retreat-service-img {
 	width: 100%;
