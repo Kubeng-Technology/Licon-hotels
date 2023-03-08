@@ -28,7 +28,7 @@
 	align-items: center;
 	justify-content: center;
   gap: 5px;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
 }
 
 .contact-heading > h1 {
@@ -83,6 +83,7 @@
 	background-color: var(--primary-text-light);
 }
 
+/*
 .get-in-touch {
 	width: 100%;
 	display: flex;
@@ -107,9 +108,10 @@
   background-color: var(--primary-text-dark);
   border: 1px solid var(--primary-text-light);
 }
+*/
 
 #newsletter {
-	padding: 5% 3%;
+	padding: 0% 5% 3%;
 }
 
 .newsletter-info {
